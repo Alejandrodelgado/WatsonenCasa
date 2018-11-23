@@ -25,8 +25,8 @@ Para las acciones
      * Atento al idioma y la región
 * Scroll hacia abajo y seleccionamos Actions SDK
      * Copiamos lo que nos propone gactions update --action_package PACKAGE_NAME --project asistente-de-casa
-     * Esta linea la usaremos luego para configurar la acción
+     * Esta linea la usaremos luego para configurar la acción, llamando con el fichero json
      * gactions update --action_package actionasistentedecasa.json --project asistente-de-casa
-     
-     
+      * en este fichero
+
 
