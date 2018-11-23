@@ -26,7 +26,10 @@ Para las acciones
 * Scroll hacia abajo y seleccionamos Actions SDK
      * Copiamos lo que nos propone gactions update --action_package PACKAGE_NAME --project asistente-de-casa
      * Esta linea la usaremos luego para configurar la acción, llamando con el fichero json
-     * gactions update --action_package actionasistentedecasa.json --project asistente-de-casa
-      * en este fichero
+     * gactions update --action_package actionasistentedecasa.json --project asistente-de-casa-4cff4
+         * en este fichero json, se ve la url que se va a llamar
+         * si tenemos un error de credenciales, atentos al fichero creds.data
+         * atentos a las mayúsculas y minúsculas en los nombres de la acción
+               Your app for the Assistant for project asistente-de-casa-4cff4 was successfully updated with your actions. Visit the Actions on Google console to finish registering your app and submit it for review at https://console.actions.google.com/project/asistente-de-casa-4cff4/overview
 
 
