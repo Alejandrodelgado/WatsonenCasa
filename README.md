@@ -40,12 +40,12 @@ Para las acciones
 
 * Dentro de la consola de IBM Cloud, elegir el servicio Watson Assistant, aprovechar y copiar las credenciales (API)
 * En la opción de menu, elegir launch
-* En la pestaña de skill , crear uno, importando el fichero de conversación json
+* En la pestaña de skill , crear uno, importando el fichero de conversación json (basado en el de Ana López)
 * Crear un asistente en la pestaña para copiar el workspaceID
 
 ### Creamos el interface
 
-* Dentro del nodered, importar el flujo con el json
+* Dentro del nodered, importar el flujo con el json (basado en el de Jaume Miralles)
 * Copiar en el nodo de Assistant, la credencial (API) y el workspaceID
 
 
