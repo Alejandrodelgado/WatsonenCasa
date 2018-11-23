@@ -31,5 +31,22 @@ Para las acciones
          * si tenemos un error de credenciales, atentos al fichero creds.data
          * atentos a las mayúsculas y minúsculas en los nombres de la acción
                Your app for the Assistant for project asistente-de-casa-4cff4 was successfully updated with your actions. Visit the Actions on Google console to finish registering your app and submit it for review at https://console.actions.google.com/project/asistente-de-casa-4cff4/overview
+* Entramos en la acción con la url de overview
+     * En Quick setup especificar la frase de activación Asistente de casa
+     * En invocación incluir la frase de invocación.
+     * En el menu simulator especificar el idioma, y probar la frase de activación
+
+### Creamos el asistente
+
+* Dentro de la consola de IBM Cloud, elegir el servicio Watson Assistant, aprovechar y copiar las credenciales (API)
+* En la opción de menu, elegir launch
+* En la pestaña de skill , crear uno, importando el fichero de conversación json
+* Crear un asistente en la pestaña para copiar el workspaceID
+
+### Creamos el interface
+
+* Dentro del nodered, importar el flujo con el json
+* Copiar en el nodo de Assistant, la credencial (API) y el workspaceID
 
 
+ 
