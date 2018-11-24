@@ -1,0 +1,31 @@
+{
+   "locale": "es",
+  "actions": [
+    {
+      "description": "Asistente de casa",
+      "name": "MAIN",
+      "fulfillment": {
+        "conversationName": "Asistente de casa"
+      },
+      "intent": {
+        "name": "actions.intent.MAIN",
+        "trigger": {
+          "queryPatterns": [
+            "Asistente de casa"
+          ]
+        }
+      }
+    }
+  ],
+  "conversations": {
+    "Asistente de casa": {
+      "name": "Asistente de casa",
+      "url": "https://asistentedemos.mybluemix.net/casawatson",
+      "in_dialog_intents": [
+        {
+          "name": "actions.intent.CANCEL"
+        }
+      ]
+    }
+  }
+}

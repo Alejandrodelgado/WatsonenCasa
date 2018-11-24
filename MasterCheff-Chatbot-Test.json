@@ -1,0 +1,667 @@
+{
+  "name": "MasterCheff Chatbot Test",
+  "intents": [
+    {
+      "intent": "Saludo",
+      "examples": [
+        {
+          "text": "qué tal estás?"
+        },
+        {
+          "text": "buenas noches"
+        },
+        {
+          "text": "buenas tardes"
+        },
+        {
+          "text": "buenos días"
+        },
+        {
+          "text": "cómo estás?"
+        },
+        {
+          "text": "hola"
+        },
+        {
+          "text": "me alegro de hablar contigo"
+        },
+        {
+          "text": "en qué me puedes ayudar?"
+        }
+      ]
+    },
+    {
+      "intent": "Cenar",
+      "examples": [
+        {
+          "text": "Me gustaría cenar"
+        },
+        {
+          "text": "Qué me aconsejas para cenar?"
+        },
+        {
+          "text": "Voy a cenar"
+        },
+        {
+          "text": "Qué puedo cenar?"
+        },
+        {
+          "text": "Qué ceno?"
+        },
+        {
+          "text": "No sé qué cenar"
+        }
+      ]
+    },
+    {
+      "intent": "offtopic",
+      "examples": [
+        {
+          "text": "en un lugar de la mancha"
+        },
+        {
+          "text": "quiero cambiarme de ciudad"
+        },
+        {
+          "text": "no me gusta la television"
+        },
+        {
+          "text": "donde pyuedo ir de vacaciones"
+        },
+        {
+          "text": "donde vas alfonso doce"
+        }
+      ]
+    },
+    {
+      "intent": "Comer",
+      "examples": [
+        {
+          "text": "No sé qué comer"
+        },
+        {
+          "text": "Me gustaría comer"
+        },
+        {
+          "text": "Quiero comer"
+        },
+        {
+          "text": "Qué puedo hacer de comida?"
+        },
+        {
+          "text": "Qué me aconsejas para comer?"
+        },
+        {
+          "text": "Voy a comer"
+        }
+      ]
+    },
+    {
+      "intent": "Despedida",
+      "examples": [
+        {
+          "text": "Adios"
+        },
+        {
+          "text": "Hasta la próxima"
+        },
+        {
+          "text": "Bye"
+        },
+        {
+          "text": "Hasta luego"
+        },
+        {
+          "text": "Muchas gracias"
+        }
+      ]
+    },
+    {
+      "intent": "Desayunar",
+      "examples": [
+        {
+          "text": "Voy a desayunar"
+        },
+        {
+          "text": "Qué me aconsejas para desayunar?"
+        },
+        {
+          "text": "Qué desayuno?"
+        },
+        {
+          "text": "Quiero que me digas qué desayunar"
+        },
+        {
+          "text": "No sé qué desayunar"
+        },
+        {
+          "text": "Me gustaría desayunar"
+        },
+        {
+          "text": "Qué puedo hacer de desayuno?"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Comida",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Pasta",
+          "synonyms": [
+            "Lazos",
+            "Tortelini",
+            "Spaguetti",
+            "Macarrones",
+            "Lasaña"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Verduras",
+          "synonyms": [
+            "Pimiento",
+            "Lechuga",
+            "Tomate",
+            "Cebolla"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Pescado",
+          "synonyms": [
+            "Dorada",
+            "Atun",
+            "Bacalao",
+            "Salmón",
+            "Merluza",
+            "Gallo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Fruta",
+          "synonyms": [
+            "Ciruelas",
+            "Fresas",
+            "Plátano",
+            "Manzana",
+            "Piña",
+            "Pera",
+            "Melón",
+            "Sandía"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Carne",
+          "synonyms": [
+            "Vacuno",
+            "Pollo",
+            "Buey",
+            "Cordero",
+            "Cerdo",
+            "Ternera"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-percentage",
+      "values": []
+    },
+    {
+      "entity": "sys-currency",
+      "values": []
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "Respuesta",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "saludable",
+          "synonyms": [
+            "ligero"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "no saludable",
+          "synonyms": [
+            "con calorías"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    },
+    {
+      "entity": "nombres",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "alejandro",
+          "synonyms": [
+            "alex"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "begoña",
+          "synonyms": [
+            "bego"
+          ]
+        }
+      ]
+    }
+  ],
+  "language": "es",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-07-10"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "Comida",
+      "variable": "$Comida",
+      "dialog_node": "slot_47_1498489810631",
+      "previous_sibling": "slot_35_1498485423966"
+    },
+    {
+      "type": "slot",
+      "parent": "Comida",
+      "variable": "$number",
+      "dialog_node": "slot_35_1498485423966"
+    },
+    {
+      "type": "event_handler",
+      "parent": "Desayuno",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1498156746384",
+      "previous_sibling": "slot_2_1498156746407"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "Desayuno",
+      "variable": "$Respuesta",
+      "dialog_node": "slot_2_1498156746407"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "$nombre, Cuántas personas seréis para comer?"
+      },
+      "parent": "slot_35_1498485423966",
+      "event_name": "focus",
+      "dialog_node": "handler_37_1498485423966",
+      "previous_sibling": "handler_36_1498485423966"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_35_1498485423966",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_36_1498485423966"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$nombre, Te aconsejo que te hagas un zumo de naranja y una tostada integral con aceite. Para preparar el zumo coge unas naranjas y exprímelas y mete en la tostadora un par de tostadas durante 2 minutos. Te puedo ayudar en algo más?"
+          ]
+        }
+      },
+      "parent": "slot_2_1498156746407",
+      "conditions": "@Respuesta:saludable",
+      "event_name": "filled",
+      "dialog_node": "handler_31_1498485097419",
+      "previous_sibling": "handler_33_1498485174543"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "$nombre, Quieres desayuno saludable o no saludable?"
+      },
+      "parent": "slot_2_1498156746407",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1498156746407",
+      "previous_sibling": "handler_3_1498156746407"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$nombre, No es muy recomendable, pero toma un café con un croissant. Lo puedes tomar en cualquier cafetería o comprarlo y tomártelo en casa. Pero ojo, tiene muchas calorías!"
+          ]
+        }
+      },
+      "parent": "slot_2_1498156746407",
+      "conditions": "@Respuesta:(no saludable)",
+      "event_name": "filled",
+      "dialog_node": "handler_32_1498485112880",
+      "previous_sibling": "handler_31_1498485097419"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$nombre, No me has dicho si es saludable o no."
+          ]
+        }
+      },
+      "parent": "slot_2_1498156746407",
+      "event_name": "nomatch",
+      "dialog_node": "handler_33_1498485174543",
+      "previous_sibling": "handler_4_1498156746407"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1498156746407",
+      "context": {
+        "Respuesta": "@Respuesta"
+      },
+      "conditions": "@Respuesta",
+      "event_name": "input",
+      "dialog_node": "handler_3_1498156746407"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "text": {
+          "values": [
+            "que me digas un nombre"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "Bienvenido",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "Bienvenido"
+      },
+      "conditions": "true",
+      "dialog_node": "node_2_1511456087234",
+      "previous_sibling": "Obtener nombre"
+    },
+    {
+      "type": "standard",
+      "title": "Obtener nombre",
+      "output": {
+        "text": {
+          "values": [
+            "Hola, bienvenido $nombre !. Qué te apetece: desayunar, comer o cenar?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "Bienvenido",
+      "context": {
+        "nombre": "<?input.text?>"
+      },
+      "metadata": {},
+      "conditions": "@nombres",
+      "dialog_node": "Obtener nombre"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$nombre, Te recomiendo pescado al horno.  Pon el horno a precalentar a 190 grados y después mete el pescado durante 15-20 minutos dependiendo del grosor hasta que esté cocinado y sírvelo."
+          ]
+        }
+      },
+      "parent": "slot_47_1498489810631",
+      "conditions": "@Comida:Pescado",
+      "event_name": "filled",
+      "dialog_node": "handler_51_1498489894837",
+      "previous_sibling": "handler_50_1498489835064"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$nombre, Pon agua y sal en una olla grande. Cuando comience a hervir el agua echa la pasta en la olla, con cuidado que no se pegue. Deja cocer la pasta 5 minutos y retira el agua rápidamente para que no se pase."
+          ]
+        }
+      },
+      "parent": "slot_47_1498489810631",
+      "conditions": "@Comida:Pasta",
+      "event_name": "filled",
+      "dialog_node": "handler_55_1498490107943",
+      "previous_sibling": "handler_53_1498490020829"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$nombre, Haz la carne a la plancha. Pon una sartén con aceite durante 5 minutos y después vuelta y vuelta. Si quieres hacer cordero eso ya es más difícil. Lo siento pero no lo sé hacer. Visita nuestra página en MasterCheff y pregunta a los expertos."
+          ]
+        }
+      },
+      "parent": "slot_47_1498489810631",
+      "conditions": "@Comida:Carne",
+      "event_name": "filled",
+      "dialog_node": "handler_52_1498489961964",
+      "previous_sibling": "handler_51_1498489894837"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "$nombre, Qué te gusta para comer?"
+      },
+      "parent": "slot_47_1498489810631",
+      "event_name": "focus",
+      "dialog_node": "handler_49_1498489810631",
+      "previous_sibling": "handler_48_1498489810631"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$nombre, Corta las verduras y ponlas en una sartén a la plancha. Ya está! Mira qué fácil es."
+          ]
+        }
+      },
+      "parent": "slot_47_1498489810631",
+      "conditions": "@Comida:Verduras",
+      "event_name": "filled",
+      "dialog_node": "handler_50_1498489835064",
+      "previous_sibling": "handler_49_1498489810631"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Si no me dices qué quieres comer no te puedo aconsejar"
+          ]
+        }
+      },
+      "parent": "slot_47_1498489810631",
+      "event_name": "nomatch",
+      "dialog_node": "handler_54_1498490081736",
+      "previous_sibling": "handler_55_1498490107943"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$nombre, Es lo más fácil de hacer. No necesita preparación. Sólo sácala del frigorífico y córtalala. Es muy saludable"
+          ]
+        }
+      },
+      "parent": "slot_47_1498489810631",
+      "conditions": "@Comida:Fruta",
+      "event_name": "filled",
+      "dialog_node": "handler_53_1498490020829",
+      "previous_sibling": "handler_52_1498489961964"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_47_1498489810631",
+      "context": {
+        "Comida": "@Comida"
+      },
+      "conditions": "@Comida",
+      "event_name": "input",
+      "dialog_node": "handler_48_1498489810631"
+    },
+    {
+      "type": "standard",
+      "title": "Cena",
+      "output": {
+        "text": {
+          "values": [
+            "$nombre, No te aconsejo cenar mucho que es la comida menos saludable del día. Toma un poco de fruta y un yogur y no cocines!"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "#Cenar",
+      "dialog_node": "Cena",
+      "previous_sibling": "Comida"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "text": {
+          "values": [
+            "Lo siento. Por ahora sólo puedo ayudarte a preparar un menú muy básico. Poco a poco iré aprendiendo algo más. Consulta nuestra página de Master Cheff"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "anything_else",
+      "dialog_node": "En otras cosas",
+      "previous_sibling": "node_1_1511455910847"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "text": {
+          "values": [
+            ""
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "#Comer",
+      "dialog_node": "Comida",
+      "previous_sibling": "Desayuno"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "text": {
+          "values": [
+            "no estoy entrenado para reponder a este estilo de cosas",
+            "no estoy aqui para eso",
+            "que quieres que te diga, no tengo ni idea de lo que dices"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "#offtopic",
+      "dialog_node": "node_1_1511455910847",
+      "previous_sibling": "Despedida"
+    },
+    {
+      "type": "standard",
+      "title": "Despedida",
+      "output": {
+        "text": {
+          "values": [
+            "Muchas gracias por hablar conmigo, $nombre. Espero haberte ayudado. Hasta la próxima"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "context": {
+        "vgwHangUp": "Yes"
+      },
+      "metadata": {},
+      "conditions": "#Despedida",
+      "dialog_node": "Despedida",
+      "previous_sibling": "Cena"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "#Desayunar",
+      "dialog_node": "Desayuno",
+      "previous_sibling": "Saludo"
+    },
+    {
+      "type": "standard",
+      "title": "Saludo",
+      "output": {
+        "text": {
+          "values": [
+            "Hola, Soy tu MasterCheff particular!. Te puedo ayudar a preparar tu menú de desayuno, comida o cena. Qué es lo que quieres?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "#Saludo",
+      "dialog_node": "Saludo",
+      "previous_sibling": "Bienvenido"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "text": {
+          "values": [
+            "Hola. Soy el chatbot MasterCheff. Cómo te llamas?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bienvenido"
+    }
+  ],
+  "workspace_id": "7e6b1183-5fd6-4d2c-a878-9380c27c3f94",
+  "counterexamples": [],
+  "learning_opt_out": false,
+  "status": "Available"
+}
