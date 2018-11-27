@@ -16,6 +16,7 @@ En la cuenta de IBM Cloud instanciamos
 
 Para las acciones
 * Bajarnos el CLI de [gactions](https://developers.google.com/actions/tools/gactions-cli)
+     * En MacOs  - uname +x gactions
      * desde una shell  ./gactions -V y vemos que está bien instalado
 
 ### Creamos la acción
