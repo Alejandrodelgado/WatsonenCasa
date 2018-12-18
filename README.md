@@ -2,7 +2,7 @@
 Una forma sencilla de conectar los servicios de conversación de Watson Assistant, y Google Home.
 
 ## Requisitos
-Una cuenta en ibm cloud  [bluemix](https://console.bluemix.net) , o en breve [ibm cloud](https://console.cloud.ibm.com)
+Una cuenta en ibm cloud   [ibm cloud](https://console.cloud.ibm.com)
 
 Una cuenta de Google Actions [actions](https://developers.google.com/actions/)
 
